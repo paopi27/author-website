@@ -1,7 +1,15 @@
+import { motion } from "framer-motion";
+
 const FeaturedWorks = () => {
   return (
     <section className="py-32 bg-[#F8F5F2]">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="max-w-5xl mx-auto px-6 text-center"
+      >
         <p
           className="text-sm md:text-base uppercase tracking-[0.3em] text-[#B89B72]"
           style={{ fontFamily: "DM Sans" }}
@@ -15,7 +23,7 @@ const FeaturedWorks = () => {
         >
           A collection of poetry, stories and reflections.
         </h2>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const books = [
   {
     title: "A Dream of You",
@@ -27,13 +29,19 @@ const BooksSection = () => {
     <section className="bg-[#F8F5F2] py-32">
       <div className="max-w-6xl mx-auto px-6 space-y-32">
         {books.map((book, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.2,
+            }}
+            viewport={{ once: true }}
             className={`flex flex-col md:flex-row items-center gap-16 ${
               book.reverse ? "md:flex-row-reverse" : ""
             }`}
           >
-            {/* IMAGE */}
             <div className="flex-1">
               <img
                 src={book.image}
@@ -42,7 +50,6 @@ const BooksSection = () => {
               />
             </div>
 
-            {/* TEXT */}
             <div className="flex-1">
               <p
                 className="uppercase tracking-[0.3em] text-sm text-[#B89B72]"
@@ -65,12 +72,13 @@ const BooksSection = () => {
               <a
                 href="https://amazon.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block mt-10 px-8 py-4 border border-[#2B2B2B] rounded-full text-[#2B2B2B] tracking-[0.15em] uppercase text-sm hover:bg-[#2B2B2B] hover:text-[#F8F5F2] hover:scale-105 transition-all duration-300"
               >
                 View Book →
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
