@@ -17,11 +17,12 @@ const AuthorMessage = () => {
           perferendis”
         </h2>
 
-        <div className="flex justify-end mt-16">
+        <div className="flex justify-center md:justify-end mt-16">
           <a
             href="https://amazon.com"
             target="_blank"
-            className="inline-flex items-center gap-3 px-8 py-4 border border-[#F8F5F2] rounded-full text-[#F8F5F2] tracking-[0.15em] uppercase text-sm hover:bg-[#F8F5F2] hover:text-[#2B2B2B] hover:scale-105 transition-all duration-300"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#F8F5F2] rounded-full text-[#F8F5F2] tracking-[0.15em] uppercase text-sm hover:bg-[#F8F5F2] hover:text-[#2B2B2B] hover:scale-105 transition-all duration-300"
             style={{ fontFamily: "DM Sans" }}
           >
             Explore Books →

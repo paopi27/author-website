@@ -46,7 +46,7 @@ const BooksSection = () => {
               <img
                 src={book.image}
                 alt={book.title}
-                className="w-full rounded-[2rem] shadow-lg hover:scale-[1.02] transition-all duration-500"
+                className="w-full rounded-[2rem] shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-500"
               />
             </div>
 
@@ -73,7 +73,7 @@ const BooksSection = () => {
                 href="https://amazon.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-10 px-8 py-4 border border-[#2B2B2B] rounded-full text-[#2B2B2B] tracking-[0.15em] uppercase text-sm hover:bg-[#2B2B2B] hover:text-[#F8F5F2] hover:scale-105 transition-all duration-300"
+                className="inline-block w-full md:w-auto text-center mt-10 px-8 py-4 border border-[#2B2B2B] rounded-full text-[#2B2B2B] tracking-[0.15em] uppercase text-sm hover:bg-[#2B2B2B] hover:text-[#F8F5F2] hover:scale-105 transition-all duration-300"
               >
                 View Book →
               </a>
